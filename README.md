@@ -29,19 +29,19 @@
 
 # 📖 React on Rails Two Apps <a name="about-project"></a>
 
- **React on Rails Two Apps** This is the back-end template project to showcase setting up React and Rails in two Apps.
+ **React on Rails Two Apps** This is the front-end template project to showcase setting up React and Rails in two Apps.
 
- [Front-end App](https://github.com/Elerqsousy/react-on-rails-two-apps-front-end)
+ [Back-end App](https://github.com/Elerqsousy/react-on-rails-two-apps-back-end)
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
 <details>
+  <summary>Client</summary>
   <ul>
-    <li>Ruby</li>
-    <li>Rails</li>
-    <li>PostgreSQL</li>
+    <li><a href="hhttps://react.dev/">React</a></li>
+    <li><a href="https://redux.js.org/">Redux</a></li>
   </ul>
 </details>
 
@@ -59,71 +59,57 @@
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
+
 In order to run this project you need:
-  * A basic understanding of Ruby, Rails, and Git
-  * A Postgresql connection
-### Usage
-1. Install Ruby
-2. Install Rails
 
- ```
-    ruby >= 3.2.2
-    rails >= 7.1.1
-    postgres >- 15.3
+- [Ruby on Rails](https://rubyonrails.org/) installed and running. To get more information, read the [installation guide](https://guides.rubyonrails.org/).
+
+- [PostgreSQL](https://www.postgresql.org/) installed and running
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+##
+
+### Setup
+
+Clone this repository to your desired folder:
+
+```sh
+  cd my-folder
+  https://github.com/Elerqsousy/react-on-rails-two-apps-front-end.git
 ```
-  3. Clone this repo
-```
-git clone https://github.com/Elerqsousy/react-on-rails-two-apps-back-end.git
-```
 
-you can use your own database and change the ```config/database.yml```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```yml
-  default: &default
-    adapter: postgresql
-    encoding: unicode
-    pool: 5
-    username: [your_username]
-    password: [your_password]
-    host: localhost
-
-  development:
-    <<: *default
-    database: [your_database_for_development]
-
-  test:
-    <<: *default
-    database: [your_database_for_test]
-
-  production:
-    <<: *default
-    database: [your_database_for_production]
-```
 ### Install
 
 Install this project with:
 
-```bash
-  cd react-on-rails-two-apps-back-end
-  bundle install
+```sh
+    cd react-on-rails-two-apps-front-end
+    npm install
 ```
-To create your database and migrations in the application run the following commands
 
-``````
-rails db:create
-rails db:migrate
-rails db:seed
-``````
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-it will install the required gemfile for running the project
+### Usage
 
 To run the project, execute the following command:
 
-```
-  rails s
-```
+on a new terminal from folder containing both front-end and back-end apps:
+```sh
+  cd react-on-rails-two-apps-back-end
+  bundle install
+  rails db:create
+  rails db:migrate db:seed
+  it will run the server on ```localhost:3000```
 
-it will run the server on ```localhost:3000```
+on the old terminal
+```sh
+  cd react-on-rails-two-apps-front-end
+  npm start
+  it will run the server on ```localhost:3001```
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,7 +130,7 @@ it will run the server on ```localhost:3000```
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Elerqsousy/react-on-rails-two-apps-back-end/issues).
+Feel free to check the [issues page](https://github.com/Elerqsousy/react-on-rails-two-apps-front-end/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
