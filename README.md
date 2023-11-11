@@ -1,70 +1,167 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> # React on Rails Two Apps                                                                                             
 
-## Available Scripts
+<a name="readme-top"></a>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `npm start`
+# 📗 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<!-- PROJECT DESCRIPTION -->
 
-### `npm test`
+# 📖 React on Rails Two Apps <a name="about-project"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ **React on Rails Two Apps** This is the back-end template project to showcase setting up React and Rails in two Apps.
 
-### `npm run build`
+ [Front-end App](https://github.com/Elerqsousy/react-on-rails-two-apps-front-end)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠 Built With <a name="built-with"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Tech Stack <a name="tech-stack"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<details>
+  <ul>
+    <li>Ruby</li>
+    <li>Rails</li>
+    <li>PostgreSQL</li>
+  </ul>
+</details>
 
-### `npm run eject`
+<!-- Features -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Key Features <a name="key-features"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Showcase Setting up React on Rails app in two Reps**
+- **Provide Api endpoints**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+To get a local copy up and running, follow these steps.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
+In order to run this project you need:
+  * A basic understanding of Ruby, Rails, and Git
+  * A Postgresql connection
+### Usage
+1. Install Ruby
+2. Install Rails
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ ```
+    ruby >= 3.2.2
+    rails >= 7.1.1
+    postgres >- 15.3
+```
+  3. Clone this repo
+```
+git clone https://github.com/Elerqsousy/react-on-rails-two-apps-back-end.git
+```
 
-### Code Splitting
+you can use your own database and change the ```config/database.yml```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```yml
+  default: &default
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
+    username: [your_username]
+    password: [your_password]
+    host: localhost
 
-### Analyzing the Bundle Size
+  development:
+    <<: *default
+    database: [your_database_for_development]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  test:
+    <<: *default
+    database: [your_database_for_test]
 
-### Making a Progressive Web App
+  production:
+    <<: *default
+    database: [your_database_for_production]
+```
+### Install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Install this project with:
 
-### Advanced Configuration
+```bash
+  cd react-on-rails-two-apps-back-end
+  bundle install
+```
+To create your database and migrations in the application run the following commands
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+``````
+rails db:create
+rails db:migrate
+rails db:seed
+``````
 
-### Deployment
+it will install the required gemfile for running the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To run the project, execute the following command:
 
-### `npm run build` fails to minify
+```
+  rails s
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+it will run the server on ```localhost:3000```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Mahmoud Rizk**
+
+- GitHub: [@Elerqsousy](https://github.com/Elerqsousy)
+- LinkedIn: [Mahmoud Rizk](https://www.linkedin.com/in/mahmoud-rizk/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Elerqsousy/react-on-rails-two-apps-back-end/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, give it a ⭐.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
